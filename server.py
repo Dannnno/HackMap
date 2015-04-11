@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def map():
-	return render_template(
-		'map.html', API_KEY='AIzaSyBM_DelkDCDTs9gWa0j_qV4FHQKGD0amYU')
+	return render_template('map.html')
 
 app.run(debug=True)
