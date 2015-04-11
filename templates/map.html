@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Find My Route</title>
+
+    <!-- Link to the esri stuff -->
+    <link rel="stylesheet" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+    <script src="http://js.arcgis.com/3.13/"></script>
+
+    <!-- Make our map -->
+    <script>
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        var map;
+        require(["esri/map", "dojo/domReady!"], function(Map) {
+          map = new Map("mapDiv", {
+            // Default to Los Angeles
+            center: [-118.250, 34.050],
+            zoom: 15,
+            basemap: "streets"
+          });
+        });
+      });
+    </script>
+
+    <style>
+      html, body, #mapDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  
+  <body class="claro">
+    <div id="mapDiv"></div>
+  </body>
+
+</html>
